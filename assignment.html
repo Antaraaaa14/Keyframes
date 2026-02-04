@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    
+    .blink-text{
+        font-size: 25px;
+        font-weight: bold;
+        color: red;
+        animation: blink 1s infinite;
+    }
+    @keyframes blink{
+            from{color:red;}
+            to {color: blue;}
+        }
+    .circle{
+        width:50px;
+        height:50px;
+        border:5px solid lightgray;
+        border-top:5px solid blue;
+        border-radius:50%;
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin{
+        from{ transform: rotate(0deg); }
+        to{ transform: rotate(360deg); }
+    }
+    .dot{
+        width:15px;
+        height:15px;
+        background:black;
+        border-radius:50%;
+        display:inline-block;
+        position:relative;
+        animation:bounce 0.6s infinite alternate;
+    }
+    .dot2{ animation-delay:0.2s; }
+    .dot3{ animation-delay:0.4s; }
+
+    @keyframes bounce{
+        from{ top:0px; }
+        to{ top:-20px; }
+    }
+    .logo{
+        width:80px;
+        height:80px;
+        background:orange;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-weight:bold;
+        position:relative;
+        animation:float 1.5s infinite alternate;
+    }
+    @keyframes float{
+        from{ top:0px; }
+        to{ top:30px; }
+    }
+    .container{
+        width:300px;
+        height:20px;
+        background:lightgray;
+        overflow:hidden;
+    }
+    .bar{
+        width:300px;
+        height:20px;
+        background:green;
+        position:relative;
+        animation:slide 2s infinite linear;
+    }
+    @keyframes slide{
+        from{right:300px;}
+        to{right:0px;}
+    }
+</style>
+</head>
+
+<body>
+
+<h3>Task 1: Blinking Text Loader</h3>
+<div class="blink-text">Loading...</div>
+
+<h3>Task 2: Rotating Circular Loader</h3>
+<div class="circle"></div>
+
+<h3>Task 3: Bouncing Dots</h3>
+<div class="dot"></div>
+<div class="dot dot2"></div>
+<div class="dot dot3"></div>
+
+<h3>Task 4: Floating Logo</h3>
+<div class="logo">LOGO</div>
+
+<h3>Task 5: Sliding Progress Bar</h3>
+<div class="container">
+    <div class="bar"></div>
+</div>
+
+</body>
+</html>
