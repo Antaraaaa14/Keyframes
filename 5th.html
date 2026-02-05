@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hour Glass</title>
+
+    <style>
+     body{
+        height: 100vh;
+        background-color: beige;
+     }
+     #name{
+        padding-bottom: 70px;
+        padding-left: 400px;
+        
+     }
+     .hourglass-loader {
+        margin-left: 550px;
+
+        width: 200px;
+        height: 400px;
+        position: relative;
+        animation: rotateGlass 15s ease-in-out infinite;
+        border-radius: 500px;
+     }
+     .top,
+     .bottom {
+        width: 90%;
+        height: 50%;
+        border-radius: 50%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background: transparent;
+        overflow: hidden;
+        border: 5px solid #e67e22;
+        position: relative;
+     }
+
+     .bottom {
+        background: transparent;
+        border: 5px solid #e67e22;
+        transform: rotateZ(180deg);
+        position: relative;
+        bottom: 2px;
+     }
+
+     .sand {
+        width: 100%;
+        height: 100%;
+        background-color: #e67d22cd;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+     }
+
+     .sand-top{
+        transform-origin: top center;
+        animation: flowdown 10s infinite linear;
+     }
+
+     .sand-bottom{
+        transform-origin: bottom center;
+        animation: flowup 10s infinite linear;
+     }
+
+     @keyframes flowup {
+        0%{
+            transform: scaleY(1);
+        }
+        70%{
+            transform: scaleY(0);
+        }
+        100%{
+            transform: scaleY(0);
+        }
+     }
+
+     @keyframes flowdown {
+        0%{
+            transform: scaleY(0);
+        }
+        70%{
+            transform: scaleY(1);
+        }
+        100%{
+            transform: scaleY(1);
+        }
+     }
+      
+     @keyframes rotateGlass {
+        0%{
+            transform: rotateZ(180deg);
+        }
+        50%{
+            transform: rotateZ(0deg);
+        }
+        100%{
+            transform: rotateZ(180deg);
+        }
+     }
+    </style>
+</head>
+
+<body>
+    <h1 id="name"><b><i>Hour Glass Using CSS Animation!!</i></b></h1> <br>
+    <div class="hourglass-loader">
+        <div class="top">
+            <div class="sand sand-top"></div>
+        </div>
+
+        <div class="bottom">
+            <div class="sand sand-bottom"></div>
+        </div>
+    </div>
+
+</body>
+</html>
